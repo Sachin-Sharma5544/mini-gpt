@@ -17,7 +17,7 @@ const Login: React.FC = () => {
     const theme = useTheme();
     const handleSocialLogin = (provider: string) => {
         console.log(`Sign in with ${provider}`);
-        // You can integrate actual social login here (e.g., Firebase or OAuth endpoint)
+        window.location.href = `http://localhost:5001/auth/${provider}`;
     };
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -121,7 +121,7 @@ const Login: React.FC = () => {
                     </IconButton>
 
                     <IconButton
-                        onClick={() => handleSocialLogin("GitHub")}
+                        onClick={() => handleSocialLogin("github")}
                         sx={{
                             bgcolor: "#fff",
                             border: "1px solid #ddd",
